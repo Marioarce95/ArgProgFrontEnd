@@ -1,0 +1,128 @@
+.perfil-usuario {
+  background-color: #363636;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.perfil-usuario .portada-perfil {
+  height: 0;
+  padding-bottom: 31.25%; /* Relación de aspecto 16:9 (ajustable según tus necesidades) */
+  overflow: hidden;
+}
+
+.perfil-usuario .portada-perfil .img-portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil-usuario .editar-portada {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.perfil-usuario .editar-portada:hover {
+  opacity: 0.7;
+}
+
+
+.perfil-usuario .avatar-perfil {
+  display: block;
+  width: 230px;
+  height: 230px;
+  background-color: #D9DCF1;
+  position: absolute;
+  bottom: -65px;
+  left: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
+}
+
+.perfil-usuario .cambiar-foto {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .5);
+  height: 57%;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all ease-in 200ms;
+}
+
+.perfil-usuario .cambiar-foto i {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+}
+
+.perfil-usuario .avatar-perfil:hover .cambiar-foto {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.perfil-usuario .datos-perfil {
+  text-align: left;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  padding-top: 5rem;
+  margin-top: 5rem;
+}
+
+.perfil-usuario .titulo-usuario {
+  font-size: 2.3rem;
+  white-space: nowrap;
+  margin-bottom: .5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.perfil-usuario .bio-usuario {
+  font-size: 1em;
+  margin-bottom: .75rem;
+}
+
+.perfil-usuario .icono-perfil {
+  display: none;
+  margin-right: .75rem;
+}
+
+@media (max-width: 780px) {
+  .perfil-usuario .avatar-perfil {
+      left: calc(50% - 115px);
+  }
+  .perfil-usuario .datos-perfil {
+      bottom: 200px;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+  }
+  .perfil-usuario .bio-usuario {
+      font-size: 1em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  }
+  .perfil-usuario .titulo-usuario {
+      font-size: 2.1rem;
+  }
+  .perfil-usuario .portada-perfil {
+      height: 28rem;
+  }
+  .perfil-usuario .icono-perfil {
+      display: inline-block;
+  }
+}
