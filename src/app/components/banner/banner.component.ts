@@ -26,8 +26,8 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
     this.id = 1; // Reemplaza con el ID de la persona que deseas obtener
     this.obtenerPersona();
-    this.editando = false;
     this.checkLoginStatus();
+    this.editando = false;
   }
 
   toggleEdicion(): void {
@@ -81,38 +81,43 @@ export class BannerComponent implements OnInit {
   }
 
   uploadImage(event: any): void {
-    const file = event.target.files[0];
-    const name = 'perfil-image'; // Nombre de archivo personalizado o puedes generar uno único
-    this.imageService.uploadImage(file, name).subscribe(
-      percentage => {
-        console.log(`Uploaded: ${percentage}%`);
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-        this.imageService.getImageUrl(name).subscribe(
-          url => {
-            this.persona.img = url;
-            // Actualizar la imagen de perfil en la base de datos
-            this.guardarPersona();
-          },
-          error => {
-            console.log(error);
-          }
-        );
-      }
-    );
+    if (this.isLogged) {
+      const file = event.target.files[0];
+      const name = 'perfil-image'; // Nombre de archivo personalizado o puedes generar uno único
+      this.imageService.uploadImage(file, name).subscribe(
+        percentage => {
+          console.log(`Uploaded: ${percentage}%`);
+        },
+        error => {
+          console.log(error);
+        },
+        () => {
+          this.imageService.getImageUrl(name).subscribe(
+            url => {
+              this.persona.img = url;
+              // Actualizar la imagen de perfil en la base de datos
+              this.guardarPersona();
+            },
+            error => {
+              console.log(error);
+            }
+          );
+        }
+      );
+    } else {
+      console.log('El usuario no ha iniciado sesión. No se permite la carga de imágenes.');
+    }
   }
-
   checkLoginStatus(): void {
     this.isLogged = this.tokenService.getToken() !== null;
+    console.log('Is Logged:', this.isLogged);
   }
 
   logout(): void {
     this.tokenService.logOut();
     this.checkLoginStatus();
     this.editando = false; // Asegurarse de que el modo de edición esté desactivado al hacer logout
+    console.log('Logout realizado correctamente');
   }
 }
 

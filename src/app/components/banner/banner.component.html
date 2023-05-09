@@ -1,14 +1,16 @@
 <div class="container-fluid perfil-usuario">
   <div class="portada-perfil">
-    <img src="http://localhost/multimedia/relleno/fondo-9.png" alt="">
+    <img src="src/assets/banner.png" alt="">
     <div class="avatar-perfil">
       <img [src]="persona?.img" alt="">
       <label for="img" class="cambiar-foto">
-        <i class="bi bi-camera"></i>
+        <input *ngIf="isLogged && !editando" type="file" class="form-control" id="img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+        <button *ngIf="isLogged && editando" class="btn-logout" (click)="logout()">
+          <i class="bi bi-camera"></i>
+        </button>
       </label>
-      <input type="file" class="form-control" id="img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
     </div>
-    <a href="#" class="editar-portada">
+    <a *ngIf="isLogged && !editando" href="#" class="editar-portada">
       <i class="bi bi-camera"></i>
     </a>
   </div>
