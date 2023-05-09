@@ -1,15 +1,15 @@
 <div class="container-fluid perfil-usuario">
-    <div class="portada-perfil">
-      <img src="http://localhost/multimedia/relleno/fondo-9.png" alt="portada" class="img-portada">
-      <div class="avatar-perfil">
-        <img class="img-perfil" src="http://localhost/multimedia/relleno/img-c9.png" alt="img">
-        <a href="#" class="cambiar-foto">
-          <i class="bi bi-camera"></i>
-          <span>Cambiar foto</span>
-        </a>
-      </div>
-      <a href="#" class="editar-portada">
+  <div class="portada-perfil">
+    <img src="http://localhost/multimedia/relleno/fondo-9.png" alt="">
+    <div class="avatar-perfil">
+      <img [src]="persona?.img" alt="">
+      <label for="img" class="cambiar-foto">
         <i class="bi bi-camera"></i>
-      </a>
+      </label>
+      <input type="file" class="form-control" id="img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
     </div>
+    <a href="#" class="editar-portada">
+      <i class="bi bi-camera"></i>
+    </a>
   </div>
+</div>

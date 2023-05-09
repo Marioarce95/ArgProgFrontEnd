@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
   providers: [PersonaService]
 })
 export class AcercaDeComponent implements OnInit {
-  persona: persona;
+  persona: persona = new persona("", "", "", "");
   id: number;
   editando: boolean = false;
   mensaje: string;
