@@ -1,9 +1,139 @@
-.row{
+.experience-section {
+    background-color: #2e2e2e;
+    padding: 40px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .add-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .experience-list .row {
+    margin: 0 -10px;
+  }
+  
+  .experience-item {
+    background-color: #fff;
+    border-radius: 4px;
     padding: 20px;
-}
-div{
-    background: #a1b5cb;
-}
-h1, h3{
-    display: inline;
-}
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .experience-list p {
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .btn-light {
+    background-color: #f8f9fa;
+    color: #000;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+    
+    .experience-name {
+      font-size: 1.5rem;
+    }
+    
+    .btn {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+    
+    .add-button-wrapper {
+      justify-content: flex-start;
+    }
+    
+    .experience-list table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      }
+      
+      .experience-list td {
+        white-space: nowrap;
+      }
+      
+      .experience-list button {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+        .section-title {
+        font-size: 2rem;
+        }
+        
+        .experience-name {
+        font-size: 1.5rem;
+        }
+        
+        .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+        }
+        
+        .add-button-wrapper {
+        justify-content: flex-start;
+        }
+        
+        .experience-list .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+        
+        .experience-item {
+        flex-basis: calc(50% - 10px);
+        margin-bottom: 10px;
+        }
+        }
+  

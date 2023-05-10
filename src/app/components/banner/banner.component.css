@@ -6,7 +6,7 @@
 
 .perfil-usuario .portada-perfil {
   height: 0;
-  padding-bottom: 31.25%; /* Relación de aspecto 16:9 (ajustable según tus necesidades) */
+  padding-bottom: 38.25%; /* Relación de aspecto 16:9 (ajustable según tus necesidades) */
   overflow: hidden;
   
 }
@@ -38,11 +38,11 @@
   width: 270px;
   height: 270px;
   position: absolute;
-  bottom: -65px;
-  left: 2em;
+  bottom: -77px;
+  left: 4em;
   border-radius: 50%;
   overflow: hidden;
-  border: 8px solid #FFFFFF;
+  border: 3px solid #ffffff;
   box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
   object-fit: cover;
 }
@@ -73,4 +73,35 @@
 
 .perfil-usuario .avatar-perfil input[type="file"] {
   display: none;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 576px) {
+  .perfil-usuario .avatar-perfil {
+    width: 150px;
+    height: 150px;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .perfil-usuario .avatar-perfil {
+    width: 200px;
+    height: 200px;
+    bottom: -78px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .perfil-usuario .avatar-perfil {
+    width: 230px;
+    height: 230px;
+    bottom: -78px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

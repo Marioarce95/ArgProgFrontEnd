@@ -1,11 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-    height: 100%;
+html, body, .cuerpo {
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+body > * {
+  flex: 1;
 }

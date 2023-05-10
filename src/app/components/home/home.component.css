@@ -1,0 +1,30 @@
+/* Estilos globales para el contenedor */
+.container {
+    max-width: 1200px; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 20px; /* Agrega un espacio de relleno a los lados del contenedor */
+    box-sizing: border-box; /* Incluye el espacio de relleno en el ancho total del contenedor */
+    background-color: #2e2e2e;
+  }
+  
+  /* Media queries para pantallas pequeñas */
+  @media (max-width: 576px) {
+    .container {
+      padding: 0 10px; /* Redefine el espacio de relleno para pantallas pequeñas */
+    }
+  }
+  
+  /* Media queries para pantallas medianas */
+  @media (min-width: 577px) and (max-width: 992px) {
+    .container {
+      max-width: 960px; /* Redefine el ancho máximo del contenedor para pantallas medianas */
+    }
+  }
+  
+  /* Media queries para pantallas grandes */
+  @media (min-width: 993px) {
+    .container {
+      max-width: 1200px; /* Redefine el ancho máximo del contenedor para pantallas grandes */
+    }
+  }
+  
