@@ -10,9 +10,10 @@
   }
   
   .section-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: #5aa6f7;
   }
   
   .add-button-wrapper {
@@ -26,7 +27,7 @@
   }
   
   .experience-item {
-    background-color: #fff;
+    background-color: floralwhite;
     border-radius: 4px;
     padding: 20px;
     margin-bottom: 20px;

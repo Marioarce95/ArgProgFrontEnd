@@ -61,7 +61,7 @@
 }
 
 /* Para la vista de celular */
-@media (max-width: 575px) {
+@media (max-width: 912px) {
   .navbar-nav {
     flex-direction: row;
     justify-content: flex-end;

@@ -1,9 +1,107 @@
-.row{
+.education-section {
+    background-color: #2e2e2e;
+    padding: 40px 0;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #5aa6f7;
+  }
+  
+  .add-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .education-list .row {
+    margin: 0 -10px;
+  }
+  
+  .education-item {
+    background-color: floralwhite;
+    border-radius: 4px;
     padding: 20px;
-}
-div{
-    background: #a1b5cb;
-}
-h1, h3{
-    display: inline;
-}
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #000;
+  }
+  
+  .education-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .education-list p {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .btn-light {
+    background-color: #f8f9fa;
+    color: #000;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .education-name {
+      font-size: 1.5rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 8px
+      16px;
+    }
+    
+    .add-button-wrapper {
+    justify-content: flex-start;
+    }
+    
+    .education-list .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+    
+    .education-item {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 10px;
+    }
+    }

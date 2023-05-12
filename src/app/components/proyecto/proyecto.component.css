@@ -1,15 +1,24 @@
-.row{
+.row {
     padding: 20px;
-    background-color: #a1b5cb;
-}
-.contenedor{
-    width: auto;
-}
-.parte1, .parte2{
-    display: inline-block;
-    text-align: justify;
-}
-.img-proyecto{
+    background-color: #2e2e2e;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #5aa6f7;;
+  }
+
+  .parte1,
+  .parte2 {
+    text-align: center;
+  }
+  
+  .img-proyecto {
     box-shadow: 10px 10px 30px #000000;
-    box-shadow: ejeX ejeY difumasion color;
-}
+  }
+  

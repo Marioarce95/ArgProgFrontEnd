@@ -5,9 +5,9 @@
 }
 
 .perfil-usuario .portada-perfil {
-  height: 0;
-  padding-bottom: 38.25%; /* Relación de aspecto 16:9 (ajustable según tus necesidades) */
-  overflow: hidden;
+  height: 400px; /* Ajusta el valor según tus necesidades */
+  padding-bottom: 0;
+  overflow: visible;
   
 }
 

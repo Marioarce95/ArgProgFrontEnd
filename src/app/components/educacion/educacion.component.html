@@ -1,31 +1,27 @@
-<div class="row">
-    <h1>Educacion</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-            Agregar Educacion
-        </button>
+<section class="education-section">
+    <div class="container">
+      <h1 class="section-title">Educación</h1>
+      <div class="add-button-wrapper" *ngIf="isLogged">
+        <button class="btn btn-dark" routerLink="/nuevaedu">Nueva Educación</button>
+      </div>
+      <div class="education-list">
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let educacion of educacion">
+            <div class="education-item">
+              <h2 class="education-name">{{ educacion.nombreE }}</h2>
+              <p>{{ educacion.descripcionE }}</p>
+              <div *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editedu/{{ educacion.id }}">
+                  <i class="bi bi-pencil-fill"></i> EDITAR
+                </button>
+                <button class="btn btn-danger" (click)="delete(educacion.id)">
+                  <i class="bi bi-trash-fill"></i> BORRAR
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td>
-                        <h2>{{Educacion.nombreE}}</h2>
-                    </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</div>
+  </section>
+  
